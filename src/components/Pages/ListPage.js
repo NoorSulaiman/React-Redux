@@ -8,17 +8,17 @@ class ListPage extends React.Component {
         items: []
     }
 
-    addItem = (item) => { this.state.item.push(item) }
+    addItem = (item) => this.state.item.push(item)
     render() {
         return (
             <Grid columns={3} divided>
                 <Grid.Row>
                     <Grid.Column>
                         <h1>Add Items</h1>
-                        <ItemForm />
+                        <ItemForm submit={this.addItem} />
                     </Grid.Column>
                     <Grid.Column>
-                        <Table />
+                        <Table items={this.state.items} />
                     </Grid.Column>
                 </Grid.Row>
             </Grid>
