@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ctxStore = react.createContext();
+const ctxStore = React.createContext();
 
 export const Provider = ({ store, children }) => {
     return (

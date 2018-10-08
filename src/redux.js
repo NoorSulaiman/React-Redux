@@ -1,4 +1,4 @@
-function createStore(reducer, initialState) {
+export function createStore(reducer, initialState) {
     let state = initialState
     const listeners = [];
 
@@ -13,7 +13,7 @@ function createStore(reducer, initialState) {
     }
 
     function subscribe(listener) {
-        const index = listener.push(listener);
+        const index = listeners.push(listener);
         return () => listeners.splice(index, 1)
     }
 

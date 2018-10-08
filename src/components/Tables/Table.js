@@ -12,16 +12,15 @@ const ItemsTable = ({ items }) => (
         </Table.Header>
 
         <Table.Body>
-
-            {/* {items.map((item, i) => {
+            {items.map((item, i) => {
                 return (
-                    <Table.Row>
+                    <Table.Row key={i}>
                         <Table.Cell>{i + 1}</Table.Cell>
                         <Table.Cell>{item}</Table.Cell>
                     </Table.Row>
                 )
             })
-            } */}
+            }
 
 
         </Table.Body>
