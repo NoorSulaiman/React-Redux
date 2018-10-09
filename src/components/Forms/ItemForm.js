@@ -48,7 +48,7 @@ class ItemForm extends React.Component {
         const errors = {};
         const { index } = data;
         if (index.length === 0 || !index.trim()) errors.index = "Can't be blank"
-        if (typeof (index) !== "number") errors.index = "Should be a number from the list"
+        if (isNaN(parseInt(index))) errors.index = "Should be a number from the list"
         return errors;
     };
 
