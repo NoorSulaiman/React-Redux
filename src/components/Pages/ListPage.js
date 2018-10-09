@@ -1,25 +1,29 @@
 import React from 'react';
-import { Grid } from 'semantic-ui-react';
+import { Grid, Container } from 'semantic-ui-react';
 import { addItem, removeItem } from '../../actions/listActions';
 import { connect } from '../../react-redux';
 import ItemForm from '../Forms/ItemForm';
 import Table from '../Tables/Table';
+import './listPage.css';
 
 
 class ListPage extends React.Component {
 
     render() {
         return (
-            <Grid columns={3} divided>
-                <Grid.Row>
-                    <Grid.Column>
-                        <ItemForm add={this.props.add} remove={this.props.remove} />
-                    </Grid.Column>
-                    <Grid.Column>
-                        <Table items={this.props.items} />
-                    </Grid.Column>
-                </Grid.Row>
-            </Grid>
+            <Container>
+                <Grid id="list" columns={3} divided stackable>
+                    <Grid.Row>
+                        <Grid.Column>
+                            <ItemForm add={this.props.add} remove={this.props.remove} />
+                        </Grid.Column>
+                        <Grid.Column width={10}>
+                            <Table items={this.props.items} />
+                        </Grid.Column>
+                    </Grid.Row>
+                </Grid>
+                <h2 id="projectDesc">This is a simple project i used my own implementation of Redux & React-Redux modules</h2>
+            </Container >
         );
     }
 }
