@@ -22,7 +22,7 @@ class ListPage extends React.Component {
                         </Grid.Column>
                     </Grid.Row>
                 </Grid>
-                <h2 id="projectDesc">This is a simple project i used my own implementation of Redux & React-Redux modules</h2>
+                <h2 id="projectDesc">This is a simple project that i used in it my own implementation of Redux & React-Redux modules</h2>
             </Container >
         );
     }

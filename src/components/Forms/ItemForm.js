@@ -58,7 +58,7 @@ class ItemForm extends React.Component {
         const { data, errors } = this.state;
         return (
             <>
-                <h1>Add Items</h1>
+                <h3>Add Items</h3>
                 <Form onSubmit={this.add}>
                     <Form.Field error={!!errors.item}>
                         <label htmlFor="item"></label>
@@ -74,7 +74,7 @@ class ItemForm extends React.Component {
                     </Form.Field>
                     <Button primary>Add Item</Button>
                 </Form>
-                <h1>Remove Items</h1>
+                <h3>Remove Items</h3>
                 <Form onSubmit={this.remove}>
                     <Form.Field error={!!errors.index}>
                         <label htmlFor="index"></label>
